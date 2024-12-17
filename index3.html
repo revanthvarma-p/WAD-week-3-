@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-rows: 1fr 1fr 5fr;
+            height: 100vh;
+        }
+        .row {
+            display: flex;
+            border: 1px solid #ccc;
+        }
+        .row:first-child {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+        .row:nth-child(2) {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            text-align: center;
+        }
+        .row:last-child {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ddd;
+        }
+        .link, .services {
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .link:hover, .services:hover {
+            background-color: #ddd;
+        }
+        .description {
+            padding: 20px;
+            border-left: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        
+            <div class="logo">
+                <img src="rpin.jpeg" alt="Website Logo" style="max-width: 100%; height: auto;">
+            </div>
+            <div class="header">
+            <h1 style="font-family: 'Brush Script MT', cursive;">E-Commerce</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <a href="home.html" target="content" class="link">Home</a>
+            <a href="login.html" target="content" class="link">Login</a>
+            <a href="cart.html" target="content" class="link">Cart</a>
+            <a href="contact.html" target="content" class="link">Contact Us</a>
+        </div>
+
+        <div class="row">
+            <div>
+                <a href="BestSellers.html" target="content" class="services">Best Sellers</a><br>
+                <a href="trending.html" target="content" class="services">Trending</a><br>
+            </div>
+            <iframe name="content" class="description">
+            </iframe>
+        </div>
+    </div>
+</body>
+</html>
